@@ -1,0 +1,164 @@
+.header
+   padding-bottom: 68px
+   background: #F5F5F5
+   &__top
+      margin-bottom: 12px
+      padding: 14px 0
+      display: flex
+      align-items: center
+   &__logo
+      display: inline-block
+      width: 98px
+      position: relative
+      z-index: 5
+      img
+         display: block
+         width: 100%
+   &__info
+      padding-bottom: 36px
+      position: relative
+      &-inner
+         max-width: 520px
+         position: relative
+         z-index: 5
+   &__light
+      position: absolute
+      right: 0
+      top: -70px
+      &-desk
+         display: none
+   &__title
+      margin-bottom: 24px
+      color: var(--titleColor)
+      font-weight: 800
+      font-size: 35px
+      line-height: 110%
+      span
+         font-size: 1.16em
+   &__text
+      font-weight: 600
+      font-size: 18px
+      line-height: 140%
+      p
+         margin-bottom: 16px
+         &:last-child
+            margin-bottom: 0
+   &__design
+      margin-bottom: 20px
+      height: 284px
+      position: relative
+      background: #cacaca
+   &__img
+      width: 100%
+      max-width: 335px
+      max-width: none
+      height: 338px
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      display: flex
+      justify-content: center
+      img
+         display: block
+
+@media all and (min-width: 1280px)
+   .header
+      padding-bottom: 0
+      &__light
+         right: auto
+         left: 0
+         top: 0
+         &-desk
+            width: 300px
+            display: block
+      &__main
+         display: flex
+      &__bottom
+         display: none
+      &__info
+         max-width: 720px
+         padding-bottom: 80px
+         position: static
+      &__design
+         width: 40%
+         height: auto
+         flex-grow: 1
+         margin-bottom: 0
+      &__img
+         width: 100%
+         max-width: 100%
+         height: auto
+         left: -130px
+         transform: none
+         img
+            width: 70%
+      &__light
+         &-mob
+            display: none
+
+@media all and (min-width: 1366px)
+   .header
+      &__top
+         margin-bottom: 50px
+         padding: 0
+      &__info
+         padding-top: 30px
+      &__logo
+         width: 150px
+      &__title
+         margin-bottom: 32px
+         font-size: 60px
+      &__text
+         font-size: 20px
+         p
+            margin-bottom: 20px
+      &__img
+         img
+            width: 100%
+            max-width: 851px
+
+@media all and (min-width: 1440px)
+   .header
+      &__main
+         width: 100%
+         max-width: 1570px
+         margin-left: auto
+      &__top
+         margin-bottom: 110px
+      &__title
+         margin-bottom: 40px
+         font-size: 80px
+      &__text
+         font-size: 23px
+         p
+            margin-bottom: 24px
+      &__info
+         margin: 0
+         padding-top: 45px
+         padding-bottom: 126px
+         &-inner
+            max-width: 560px
+      &__design
+         width: 50%
+         max-width: 847px
+      &__img
+         left: -180px
+
+@media all and (min-width: 1700px)
+   .header
+      &__light
+         left: -0
+         &-desk
+            width: 605px
+      &__design
+         height: 911px
+
+@media all and (min-width: 1921px)
+   .header
+      &__main
+         margin: 0 auto
+      &__info
+         position: relative
+      &__light
+         left: -300px

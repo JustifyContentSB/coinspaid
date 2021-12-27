@@ -1,0 +1,15 @@
+.popup.popup-main(style="display: none;")
+   .popup__inner
+      a.popup__close(href="#")
+         img(src="images/icons/close.svg", alt="закрыть попап" width="22" height="22")
+      form.photo__form.form(action="#")
+         .form__inputs
+            label.form__label
+               span.form__label-title Введите имя
+               input(type="text" placeholder="Александр")
+            label.form__label.form__label--textarea(for="textarea")
+               span.form__label-title Ваше пожелание
+            textarea.form__textarea#textarea(placeholder="Максимум 1000 симовлов")
+         button.btn Поздравить сотрудников
+            span.btn__arrow
+               img.btn__arrow-svg(src="images/icons/arrow.svg" alt="стрелка" width="91" height="46")

@@ -1,0 +1,46 @@
+.btn
+   display: inline-flex
+   align-items: center
+   font-weight: bold
+   font-size: 17px
+   line-height: 120%
+   color: var(--titleColor)
+   &__arrow
+      display: inline-block
+      margin-left: 14px
+      position: relative
+      &-svg
+         position: relative
+         z-index: 5
+      &::after
+         content: ''
+         position: absolute
+         top: 50%
+         transform: translateY(-50%)
+         right: 0
+         width: 46px
+         height: 46px
+         border-radius: 50%
+         background: var(--accent)
+
+.title
+   font-weight: bold
+   font-size: 30px
+   line-height: 115%
+
+.text
+   font-size: 16px
+   line-height: 140%
+
+@media all and (min-width: 1366px)
+   .title
+      font-size: 46px
+   .text
+      font-size: 20px
+
+@media all and (min-width: 1440px)
+   .title
+      font-size: 60px
+      line-height: 120%
+   .text
+      font-size: 23px

@@ -1,0 +1,290 @@
+extends base/_layout
+block head
+    title Main
+block header
+    header.header
+        .header__inner
+            .header__main
+                .header__info.container
+                    .header__top
+                        a.header__logo(href="#")
+                            img(src="images/icons/logo.svg" alt="логотип" width="98" height="32")
+                    .header__light
+                        img.header__light-mob(src="images/header/light-mob.svg", alt="картинка" width="180" height="242")
+                        img.header__light-desk(src="images/header/light-desk.svg", alt="картинка" width="605" height="725")
+                    .header__info-inner
+                        h1.header__title Новому #[span 2022] #[br] году быть!
+                        .header__text
+                            p.
+                                Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет елка, только мало толка.
+                            p.
+                                Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет елка, только мало толка.
+                .header__design
+                    .header__img
+                        picture
+                            source(srcset="images/header/santa.webp" type="image/webp" media="(min-width: 1280px)")
+                            source(srcset="images/header/santa.png" type="image/png" media="(min-width: 1280px)")
+                            source(srcset="images/header/santa-mob.webp" type="image/webp")
+                            img(src="images/header/santa-mob.png" alt="санта" width="335" height="338")
+                .header__bottom.container
+                    a.btn(href="#") Опубликовать свое фото
+                        span.btn__arrow
+                            img.btn__arrow-svg(src="images/icons/arrow.svg", alt="стрелка" width="91" height="46")
+
+block page
+    section.event
+        .event__inner.container
+            .event__img
+                img(src="images/icons/tree.svg", alt="ёлка" width="795" height="1118")
+            .event__about
+                h2.title.event__title Программа #[br] мероприятия
+                .event__list-wrapper.text
+                    .event__item.event__item--start
+                        span.event__time 19:00
+                        p.event__info Начало эфира
+                    ol.event__list
+                        li.event__item
+                            span.event__time 19:05
+                            p.event__info Благотворительный аукцион
+                        li.event__item
+                            span.event__time 19:20
+                            p.event__info Интеллектуально-развивательная программа от Студии «Союз»
+                        li.event__item
+                            span.event__time 19:50
+                            p.event__info Интеллектуально-развивательная программа от Студии «Союз»
+                        li.event__item
+                            span.event__time 21:00
+                            p.event__info Подведение итогов аукциона и награждение победителей в конкурсах
+                        li.event__item
+                            span.event__time 21:10
+                            p.event__info Выступление A-Band
+                        li.event__item
+                            span.event__time 21:30
+                            p.event__info Завершение эфира
+    
+    section.photo
+        .photo__inner
+            header.photo__header.container
+                h2.title.photo__title Фото участников
+                p.photo__lead.text.
+                    Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет.
+            .photo__box
+                .photo__slider
+                    .photo__slider-container.swiper-container
+                        .photo__slider-wrapper.swiper-wrapper
+                            .photo__item.swiper-slide
+                                .photo__img
+                                    .photo__img-content
+                                        picture
+                                            source(srcset="images/photo/photo-1.webp" type="image/webp")
+                                            img(src="images/photo/photo-1.png" alt="санта" width="217" height="266")
+                                    button.photo__img-like
+                                        span.photo__img-like__inner
+                                            span.photo__img-num 15
+                                            span.photo__img-icon
+                                                img(src="images/icons/like.svg", alt="нравится"  width="20" height="19")
+                                .photo__person
+                                    span.photo__name Viktor
+                                    span.photo__city Moscov
+                            .photo__item.swiper-slide
+                                .photo__img
+                                    .photo__img-content
+                                        picture
+                                            source(srcset="images/photo/photo-2.webp" type="image/webp")
+                                            img(src="images/photo/photo-2.png" alt="санта" width="217" height="266")
+                                    button.photo__img-like
+                                        span.photo__img-like__inner
+                                            span.photo__img-num 7
+                                            span.photo__img-icon
+                                                img(src="images/icons/like.svg", alt="нравится"  width="20" height="19")
+                                .photo__person
+                                    span.photo__name Alexandr
+                                    span.photo__city Smolensk
+                            .photo__item.swiper-slide
+                                .photo__img
+                                    .photo__img-content
+                                        picture
+                                            source(srcset="images/photo/photo-1.webp" type="image/webp")
+                                            img(src="images/photo/photo-1.png" alt="санта" width="217" height="266")
+                                    button.photo__img-like
+                                        span.photo__img-like__inner
+                                            span.photo__img-num 15
+                                            span.photo__img-icon
+                                                img(src="images/icons/like.svg", alt="нравится"  width="20" height="19")
+                                .photo__person
+                                    span.photo__name Viktor
+                                    span.photo__city Moscov
+                            .photo__item.swiper-slide
+                                .photo__img
+                                    .photo__img-content
+                                        picture
+                                            source(srcset="images/photo/photo-2.webp" type="image/webp")
+                                            img(src="images/photo/photo-2.png" alt="санта" width="217" height="266")
+                                    button.photo__img-like
+                                        span.photo__img-like__inner
+                                            span.photo__img-num 7
+                                            span.photo__img-icon
+                                                img(src="images/icons/like.svg", alt="нравится"  width="20" height="19")
+                                .photo__person
+                                    span.photo__name Alexandr
+                                    span.photo__city Smolensk
+                    button.swiper-button-next.photo__next
+                .photo__info.container
+                    .photo__descr
+                        h3.photo__action Загрузи свое фото!
+                        p.photo__about.text.
+                            Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет, сбудется что снится, Что опять нас обманут, ничего. Ждать уже недолго, скоро будет, сбудется что снится, Что опять нас.
+                    form.photo__form.form(action="#")
+                        .form__inputs
+                            label.form__label
+                                span.form__label-title Введите имя
+                                input(type="text" placeholder="Александр")
+                            label.form__label
+                                span.form__label-title Введите город
+                                input(type="text" placeholder="Нижний Новгор")
+                        .form__download
+                            label.form__download-label
+                                input(type="file")
+                                span.form__download-title Загрузите изображение
+                        button.btn Опубликовать свое фото
+                            span.btn__arrow
+                                img.btn__arrow-svg(src="images/icons/arrow.svg", alt="стрелка" width="91" height="46")
+
+    section.wish
+        img.wish__star(src="images/wish/star.svg", alt="звезда" width="171" height="186")
+        .wish__inner.container
+            header.wish__header
+                .wish__top
+                    h2.wish__title.title Пожелания #[br] сотрудников
+                    a.wish__top-btn.btn(href="#") Поздравить сотрудников
+                        span.btn__arrow
+                            img.btn__arrow-svg(src="images/icons/arrow.svg", alt="стрелка" width="91" height="46")
+                .wish__info
+                    p.
+                        Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет елка, только.
+                    p.
+                        Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут.
+            .wish__slider-wrapper
+                .wish__control
+                    .wish__buttons
+                        button.swiper-button-prev.wish__prev
+                        button.swiper-button-next.wish__next
+                    a.wish__reviews(href="#") Все отзывы 
+                .wish__slider.swiper-container
+                    .wish__slider-inner.swiper-wrapper
+                        .wish__item.swiper-slide
+                            .wish__person
+                                p.wish__name Светлана
+                                p.wish__score Оценили: 
+                                    span.wish__score-num 30
+                            p.wish__text.text.
+                                Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет ёлка, только мало толка. Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут!
+                            .wish__manage
+                                a.wish__read(href="#") Читать всё поздравление...
+                                span.wish__like
+                                    span Мне нравится
+                                    a.wish__like-icon(href="#")
+                                        img(src="images/icons/like.svg", alt="нравится")
+                        .wish__item.swiper-slide
+                            .wish__person
+                                p.wish__name Иван
+                                p.wish__score Оценили: 
+                                    span.wish__score-num 30
+                            p.wish__text.text.
+                                Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет ёлка, только мало толка. Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут!
+                            .wish__manage
+                                a.wish__read(href="#") Читать всё поздравление...
+                                span.wish__like
+                                    span Мне нравится
+                                    a.wish__like-icon(href="#")
+                                        img(src="images/icons/like.svg", alt="нравится")
+                        .wish__item.swiper-slide
+                            .wish__person
+                                p.wish__name Мария
+                                p.wish__score Оценили: 
+                                    span.wish__score-num 30
+                            p.wish__text.text.
+                                Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет ёлка, только мало толка. Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут!
+                            .wish__manage
+                                a.wish__read(href="#") Читать всё поздравление...
+                                span.wish__like
+                                    span Мне нравится
+                                    a.wish__like-icon(href="#")
+                                        img(src="images/icons/like.svg", alt="нравится")
+                        .wish__item.swiper-slide
+                            .wish__person
+                                p.wish__name Светлана
+                                p.wish__score Оценили: 
+                                    span.wish__score-num 30
+                            p.wish__text.text.
+                                Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет ёлка, только мало толка. Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут!
+                            .wish__manage
+                                a.wish__read(href="#") Читать всё поздравление...
+                                span.wish__like
+                                    span Мне нравится
+                                    a.wish__like-icon(href="#")
+                                        img(src="images/icons/like.svg", alt="нравится")
+                        .wish__item.swiper-slide
+                            .wish__person
+                                p.wish__name Иван
+                                p.wish__score Оценили: 
+                                    span.wish__score-num 30
+                            p.wish__text.text.
+                                Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет ёлка, только мало толка. Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут!
+                            .wish__manage
+                                a.wish__read(href="#") Читать всё поздравление...
+                                span.wish__like
+                                    span Мне нравится
+                                    a.wish__like-icon(href="#")
+                                        img(src="images/icons/like.svg", alt="нравится")
+                        .wish__item.swiper-slide
+                            .wish__person
+                                p.wish__name Мария
+                                p.wish__score Оценили: 
+                                    span.wish__score-num 30
+                            p.wish__text.text.
+                                Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет ёлка, только мало толка. Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут!
+                            .wish__manage
+                                a.wish__read(href="#") Читать всё поздравление...
+                                span.wish__like
+                                    span Мне нравится
+                                    a.wish__like-icon(href="#")
+                                        img(src="images/icons/like.svg", alt="нравится")
+                    .swiper-scrollbar
+                .wish__bottom
+                    a.wish__all(href="#") Читать все отзывы
+                    a.btn(href="#") Поздравить сотрудников
+                        span.btn__arrow
+                            img.btn__arrow-svg(src="images/icons/arrow.svg", alt="стрелка" width="91" height="46")
+    
+    section.quiz
+        .quiz__inner
+            .quiz__info.container
+                .quiz__info-inner
+                    h2.title.quiz__title Новогодний coinsКвиз
+                    p.quiz__text.text.
+                        Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет елка, только, что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет.
+                    a.btn(href="#") Перейти к квизу
+                        span.btn__arrow
+                            img.btn__arrow-svg(src="images/icons/arrow.svg", alt="стрелка" width="91" height="46")
+                img.quiz__light-mob(src="images/quiz/quiz-light.svg", alt="узор" width="375" height="658")
+                img.quiz__light-desk(src="images/quiz/quiz-light-desk.svg", alt="узор" width="1016" height="1016")
+            .quiz__img
+                .quiz__img-inner
+                    picture
+                        source(srcset="images/quiz/santa-2.webp" type="image/webp")
+                        img(src="images/quiz/santa-2.png" alt="санта" width="495" height="544")
+                img.quiz__img-pattern(src="images/quiz/quiz-mob.svg", alt="узор")
+
+    section.stream
+        .stream__inner.container
+            header.stream__header
+                h2.title.stream__title Трансляция
+                ul.stream__lang
+                    li.stream__lang-item
+                        a.stream__lang-btn(href="#") EN
+                    li.stream__lang-item
+                        a.stream__lang-btn.stream__lang-btn--active(href="#") RU
+            .stream__box
+                .stream__video
+                .stream__chat

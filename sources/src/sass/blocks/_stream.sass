@@ -1,0 +1,79 @@
+.stream
+   padding: 53px 0
+   background: #f5f5f5
+   &__title
+      margin-bottom: 30px
+   &__video
+      margin-bottom: 20px
+      height: 188px
+      background: #c4c4c4
+   &__chat
+      height: 160px
+      background: #c4c4c4
+   &__lang
+      display: none
+
+@media all and (min-width: 768px)
+   .stream
+      &__header
+         margin-bottom: 30px
+         display: flex
+         align-items: center
+      &__title
+         margin-bottom: 0
+         margin-right: 48px
+      &__lang
+         display: flex
+         &-btn
+            display: inline-flex
+            justify-content: center
+            align-items: center
+            height: 40px
+            padding: 5px 12px
+            font-size: 18px
+            font-weight: 600
+            color: var(--titleColor)
+            text-transform: uppercase
+            background: #E6E3E6
+            &--active
+               color: var(--accent)
+               background: #B6B6B9
+
+@media all and (min-width: 900px)
+   .stream
+      padding-bottom: 127px
+      &__box
+         display: flex
+         justify-content: space-between
+      &__video
+         width: 60%
+         height: 300px
+         margin: 0
+         margin-right: 30px
+         flex-grow: 1
+      &__chat
+         width: calc(40% - 30px)
+         max-width: 386px
+         height: 300px
+
+@media all and (min-width: 1280px)
+   .stream
+      padding: 80px 0
+      &__video, &__chat
+         height: 450px
+
+@media all and (min-width: 1366px)
+   .stream
+      padding: 96px 0
+      &__header
+         margin-bottom: 46px
+      &__lang
+         &-btn
+            font-size: 20px
+
+@media all and (min-width: 1440px)
+   .stream
+      &__lang
+         &-btn
+            min-width: 57px
+            font-size: 23px

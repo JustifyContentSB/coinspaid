@@ -1,0 +1,120 @@
+.quiz
+   background: var(--accent)
+   overflow: hidden
+   &__info
+      padding-top: 50px
+      margin-bottom: 50px
+      position: relative
+      &-inner
+         position: relative
+         z-index: 5
+   &__title
+      margin-bottom: 24px
+   &__text
+      margin-bottom: 40px
+      font-weight: 600
+      font-size: 18px
+   &__light
+      &-mob
+         width: 100%
+         position: absolute
+         left: 0
+         right: 0
+         top: 0
+      &-desk
+         display: none
+   &__img
+      position: relative
+      &-inner
+         display: flex
+         justify-content: center
+         position: relative
+         z-index: 5
+         img
+            display: block
+      &-pattern
+         position: absolute
+         top: -26px
+         left: 50%
+         transform: translateX(-50%)
+
+@media all and (min-width: 1280px)
+   .quiz
+      &__inner
+         width: 100%
+         max-width: 1256px
+         padding: 0 20px
+         padding-top: 72px
+         margin: 0 auto
+         display: flex
+      &__info
+         max-width: 668px
+         margin: 0
+         padding: 0
+         display: flex
+         justify-content: center
+         align-items: center
+      &__light
+         &-mob
+            display: none
+         &-desk
+            width: 616px
+            height: 616px
+            display: block
+            position: absolute
+            left: -100px
+            top: -100px
+      &__img
+         &-pattern
+            width: 500px
+            left: auto
+            transform: none
+            top: -65px
+            right: -50px
+      &__text
+         margin-bottom: 60px
+
+@media all and (min-width: 1366px)
+   .quiz
+      &__inner
+         padding-top: 75px
+      &__info
+         &-inner
+            padding-top: 23px
+      &__title
+         margin-bottom: 38px
+      &__text
+         margin-bottom: 80px
+         font-size: 20px
+      &__img
+         &-inner
+            right: 42px
+         &-pattern
+            width: 550px
+            max-width: 696px
+            top: -120px
+            right: -180px
+      &__light
+         &-desk
+            width: 1016px
+            max-width: 1016px
+            height: 1016px
+            left: -300px
+            top: -270px
+
+@media all and (min-width: 1440px)
+   .quiz
+      &__info
+         display: block
+      &__text
+         margin-bottom: 100px
+         padding-right: 18px
+         font-size: 23px
+
+@media all and (min-width: 1700px)
+   .quiz
+      &__img
+         &-pattern
+            width: 696px
+            top: -120px
+            right: -452px

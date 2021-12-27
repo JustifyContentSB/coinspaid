@@ -1,0 +1,201 @@
+.wish
+   padding: 60px 0
+   background: var(--secBg)
+   position: relative
+   &__star
+      position: absolute
+      top: 0
+      right: 0
+   &__inner
+      position: relative
+      z-index: 5
+   &__top
+      &-btn
+         display: none
+   &__title
+      margin-bottom: 24px
+   &__info
+      margin-bottom: 40px
+      font-weight: 600
+      font-size: 18px
+      line-height: 140%
+      p
+         margin-bottom: 14px
+         &:last-child
+            margin-bottom: 0
+   &__slider
+      margin-bottom: 32px
+      position: relative
+      overflow: hidden
+      &-inner
+         margin-bottom: 40px
+      .swiper
+         &-scrollbar
+            width: 100%
+            height: 2px
+            left: 0
+            opacity: 1 !important
+            background: #fff
+            &-drag
+               height: 4px
+               background: var(--accent)
+               top: auto
+               bottom: 2px
+   &__person
+      margin-bottom: 18px
+      display: flex
+      justify-content: space-between
+   &__name
+      font-weight: 600
+      font-size: 16px
+      line-height: 140%
+      text-transform: uppercase
+      color: var(--titleColor)
+   &__score
+      &-num
+         color: var(--accent)
+   &__text
+      margin-bottom: 16px
+      padding-right: 10px
+      font-size: 16px
+   &__manage
+      display: flex
+      justify-content: space-between
+   &__read
+      font-weight: 600
+      font-size: 13px
+      line-height: 140%
+      color: var(--titleColor)
+   &__like
+      cursor: pointer
+      span
+         display: none
+      img
+         display: block
+   &__bottom
+      display: flex
+      flex-direction: column
+      align-items: center
+   &__all
+      margin-bottom: 40px
+      font-weight: 600
+      font-size: 17px
+      line-height: 140%
+      color: var(--accent)
+   &__control
+      display: none
+
+@media all and (min-width: 768px)
+   .wish
+      &__like
+         display: inline-flex
+         span
+            display: block
+            margin-right: 8px
+
+@media all and (min-width: 1280px)
+   .wish
+      &__inner
+         max-width: 100%
+         padding: 0
+      &__star
+         width: 280px
+      &__header
+         width: 100%
+         max-width: 1256px
+         padding: 0 20px
+         margin: 0 auto
+         margin-bottom: 60px
+         display: flex
+      &__top
+         min-width: 400px
+         margin-right: 70px
+         &-btn
+            display: flex
+      &__info
+         max-width: 490px
+         margin-bottom: 0
+      &__text
+         margin-bottom: 24px
+         padding-right: 0
+         font-size: 17px
+      &__bottom
+         display: none
+      &__control
+         margin-bottom: 50px
+         padding-right: 80px
+         display: flex
+         justify-content: flex-end
+         align-items: center
+      &__buttons
+         margin-right: 75px
+         display: flex
+         .swiper
+            &-button
+               &-prev,
+               &-next
+                  margin: 0
+                  margin-left: 20px
+                  position: static
+      &__reviews
+         font-weight: 600
+         font-size: 17px
+         line-height: 140%
+      &__slider
+         padding: 0 20px
+         padding-left: calc((100% - 1216px)/2)
+         &::after
+            content: ''
+            position: absolute
+            z-index: 10
+            right: 0
+            top: 0
+            bottom: 0
+            background: linear-gradient(270deg, #CBCBC9 35%, rgba(202, 202, 202, 0) 100%)
+            width: 440px
+         &-inner
+            margin-bottom: 50px
+         .swiper
+            &-scrollbar
+               left: calc((100% - 1216px)/2)
+               right: 20px
+               width: auto
+               max-width: 1256px
+
+@media all and (min-width: 1366px)
+   .wish
+      padding: 70px 0
+      &__item
+         padding-right: 10px
+      &__text
+         margin-bottom: 36px
+      &__info
+         padding-top: 4px
+         font-size: 20px
+         p
+            margin-bottom: 18px
+      &__control
+         margin-bottom: 67px
+      &__slider
+         &-inner
+            margin-bottom: 67px
+
+@media all and (min-width: 1440px)
+   .wish
+      padding: 97px 0 68px
+      &__star
+         width: 340px
+      &__top
+         margin-right: 120px
+      &__title
+         margin-bottom: 66px
+      &__info
+         font-size: 23px
+         p
+            margin-bottom: 24px
+
+@media all and (min-width: 1800px)
+   .wish
+      &__star
+         width: 545px
+
