@@ -1,0 +1,163 @@
+extends base/_layout
+block head
+    title Опрос
+block header
+    header.header.header--survey
+        .header__circle
+            img.header__circle-one(src="images/header/circle.png", alt="картинка" width="482" height="437")
+            img.header__circle-two(src="images/header/circle.png", alt="картинка" width="482" height="437")
+        .header__inner
+            .header__main
+                .header__info.container
+                    .header__top
+                        a.header__logo(href="#")
+                            img(src="images/icons/logo.svg" alt="логотип" width="98" height="32")
+                    .header__info-inner
+                        h1.header__title Ответьте #[br] на вопросы
+                        .header__text
+                            p.
+                                Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет елка, только мало толка.
+                        a.btn(href="#") Полетели
+                            span.btn__arrow
+                                img.btn__arrow-svg(src="images/icons/arrow.svg", alt="стрелка" width="91" height="46")
+                .header__design
+                    .header__img
+                        picture
+                            source(srcset="images/header/fly.webp" type="image/webp")
+                            img(src="images/header/fly.png" alt="санта" width="1175" height="830")
+                .header__bottom.container
+                    a.btn(href="#") Опубликовать свое фото
+                        span.btn__arrow
+                            img.btn__arrow-svg(src="images/icons/arrow.svg", alt="стрелка" width="91" height="46")
+            .header__slider
+                .header__slider-inner.text
+                    p.header__slider-person
+                        span.header__slider-name Viktor Mironov: 
+                        span.header__slider-score 28 баллов
+                    p.header__slider-person
+                        span.header__slider-name Оксана Иванова: 
+                        span.header__slider-score 27 баллов
+                    p.header__slider-person
+                        span.header__slider-name Денис Комин: 
+                        span.header__slider-score 23 балла
+                    p.header__slider-person
+                        span.header__slider-name Дед Морозов: 
+                        span.header__slider-score 21 балл
+                    p.header__slider-person
+                        span.header__slider-name Олег Смирнов: 
+                        span.header__slider-score 18 баллов
+                    p.header__slider-person
+                        span.header__slider-name Dmitriy Novikov: 
+                        span.header__slider-score 29 баллов
+                    p.header__slider-person
+                        span.header__slider-name Viktor Mironov: 
+                        span.header__slider-score 28 баллов
+                    p.header__slider-person
+                        span.header__slider-name Денис Комин: 
+                        span.header__slider-score 23 балла
+                    p.header__slider-person
+                        span.header__slider-name Дед Морозов: 
+                        span.header__slider-score 21 балл
+                    p.header__slider-person
+                        span.header__slider-name Олег Смирнов: 
+                        span.header__slider-score 18 баллов
+                    p.header__slider-person
+                        span.header__slider-name Dmitriy Novikov: 
+                        span.header__slider-score 29 баллов
+                    p.header__slider-person
+                        span.header__slider-name Viktor Mironov: 
+                        span.header__slider-score 28 баллов
+
+
+block page
+    section.survey
+        .survey__inner
+            .survey__item
+                img.survey__sun(src="images/survey/survey-sun.png", alt="свет" width="452" height="810")
+                .survey__item-inner.container
+                    .survey__top
+                        .survey__slider
+                            .survey__slider-way
+                        .survey__num.text 
+                            span.survey__num-question Вопрос: 
+                            span.survey__num-count 1 из 20
+                    .survey__info
+                        .survey__desc
+                            h2.survey__title Из какого фильма этот кадр?
+                        .survey__img
+                            picture
+                                source(srcset="images/survey/survey.webp" type="image/webp")
+                                img(src="images/survey/survey.png" alt="картинка" width="1216" height="550")
+                        ul.survey__choose.text
+                            li.survey__choose-item
+                                button.survey__choose-btn(href="#") Приключения Билла и Тэда
+                            li.survey__choose-item
+                                button.survey__choose-btn(href="#") Матрица
+                            li.survey__choose-item
+                                button.survey__choose-btn(href="#") Не грози южному централу
+                            li.survey__choose-item
+                                button.survey__choose-btn(href="#") Добро пожаловать с Челябинск
+                        .survey__bottom
+                            button.survey__send.btn(href="#") Следующий вопрос
+                                span.btn__arrow
+                                    img.btn__arrow-svg(src="images/icons/arrow.svg", alt="стрелка" width="91" height="46")
+
+            .survey__item
+                img.survey__sun(src="images/survey/survey-sun.png", alt="свет" width="452" height="810")
+                .survey__item-inner.container
+                    .survey__top
+                        .survey__slider
+                            .survey__slider-way
+                        .survey__num.text 
+                            span.survey__num-question Вопрос: 
+                            span.survey__num-count 2 из 20
+                    .survey__info
+                        .survey__desc
+                            h2.survey__title Из какого фильма этот кадр?
+                            p.survey__about.text.
+                                Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет елка, только мало толка.
+                        .survey__img
+                            picture
+                                source(srcset="images/survey/survey.webp" type="image/webp")
+                                img(src="images/survey/survey.png" alt="картинка" width="1216" height="550")
+                        ul.survey__choose.text
+                            li.survey__choose-item
+                                button.survey__choose-btn(href="#") Приключения Билла и Тэда
+                            li.survey__choose-item
+                                button.survey__choose-btn(href="#") Матрица
+                            li.survey__choose-item
+                                button.survey__choose-btn(href="#") Не грози южному централу
+                            li.survey__choose-item
+                                button.survey__choose-btn(href="#") Добро пожаловать с Челябинск
+                        .survey__bottom
+                            button.survey__send.btn(href="#") Следующий вопрос
+                                span.btn__arrow
+                                    img.btn__arrow-svg(src="images/icons/arrow.svg", alt="стрелка" width="91" height="46")
+
+            .survey__item
+                img.survey__sun(src="images/survey/survey-sun.png", alt="свет" width="452" height="810")
+                .survey__item-inner.container
+                    .survey__top
+                        .survey__slider
+                            .survey__slider-way
+                        .survey__num.text 
+                            span.survey__num-question Вопрос: 
+                            span.survey__num-count 3 из 20
+                    .survey__info
+                        .survey__desc
+                            h2.survey__title Как треть всех биткоинов оказалась в руках одной маленькой группы людей?
+                            p.survey__about.text.
+                                Новый Год к нам мчится, скоро все случится, сбудется что снится, Что опять нас обманут, ничего не дадут. Ждать уже недолго, скоро будет елка, только мало толка.
+                        ul.survey__choose.text
+                            li.survey__choose-item
+                                button.survey__choose-btn(href="#") Опи продали пиццу по себестоисомти
+                            li.survey__choose-item
+                                button.survey__choose-btn(href="#") Матрица
+                            li.survey__choose-item
+                                button.survey__choose-btn(href="#") Это продавцы МВидео, которые фармили крипту на витринных образцах
+                            li.survey__choose-item
+                                button.survey__choose-btn(href="#") Во всем виноват Володька Демортов, с криптопалочкой 
+                        .survey__bottom
+                            button.survey__send.btn(href="#") Следующий вопрос
+                                span.btn__arrow
+                                    img.btn__arrow-svg(src="images/icons/arrow.svg", alt="стрелка" width="91" height="46")

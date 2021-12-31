@@ -138,7 +138,7 @@
          padding-top: 45px
          padding-bottom: 126px
          &-inner
-            max-width: 560px
+            max-width: 570px
       &__design
          width: 50%
          max-width: 847px
@@ -152,7 +152,8 @@
          &-desk
             width: 605px
       &__design
-         height: 911px
+         height: auto
+         max-width: 860px
 
 @media all and (min-width: 1921px)
    .header
@@ -162,3 +163,102 @@
          position: relative
       &__light
          left: -300px
+
+.header
+   &__circle
+      &-one
+         position: absolute
+         left: 0
+         top: -20px
+      &-two
+         position: absolute
+         left: -90px
+         bottom: 0
+   &__slider
+      background: var(--formColor)
+      overflow: hidden
+      &-inner
+         padding-left: 50px
+         min-height: 70px
+         display: flex
+         align-items: center
+      &-person
+         margin-right: 70px
+         font-weight: 600
+         color: #fff
+         white-space: nowrap
+      &-score
+         color: var(--accent)
+   &--survey
+      position: relative
+      .header
+         &__title
+            font-weight: 700
+         &__text
+            margin-bottom: 48px
+         &__img
+            width: auto
+            max-width: 1175px
+            height: auto
+            img
+               max-width: none
+
+@media all and (max-width: 1700px)
+   .header
+      &__circle
+         &-one
+            left: 300px
+         &-two
+            display: none
+
+@media all and (max-width: 1365px)
+   .header
+      &__circle
+         &-one
+            width: 300px
+      &__slider
+         &-inner
+            font-size: 20px
+
+@media all and (max-width: 1279px)
+   .header
+      &__circle
+         &-one
+            left: auto
+            right: 0
+      &--survey
+         padding-bottom: 0
+         .header
+            &__bottom
+               display: none
+            &__design
+               height: auto
+               margin-bottom: 0
+            &__img
+               position: static
+               picture
+                  display: flex
+                  justify-content: center
+               img
+                  width: 50%
+                  max-width: 100%
+
+@media all and (max-width: 767px)
+   .header
+      &__circle
+         &-one
+            width: 240px
+      &--survey
+         .header
+            &__img
+               img
+                  width: 80%
+
+@media all and (max-width: 460px)
+   .header
+      &__circle
+         &-one
+            width: 180px
+      &__slider
+         &-inner
+            font-size: 16px

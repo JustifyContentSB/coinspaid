@@ -13,3 +13,28 @@
          button.btn Поздравить сотрудников
             span.btn__arrow
                img.btn__arrow-svg(src="images/icons/arrow.svg" alt="стрелка" width="91" height="46")
+
+.popup.popup-result(style="display: none;")
+   .popup__inner
+      img.popup__light(src="images/popup/popup-light.png", alt="свет" width="401" height="601")
+      img.popup__santa(src="images/popup/santa-popup.png", alt="санта" width="554" height="467")
+      a.popup__close(href="#")
+         img(src="images/icons/close.svg", alt="закрыть попап" width="22" height="22")
+      .popup__content
+         .popup__top
+            h2.popup__title Ого! А ты молодец!
+            p.popup__num Ваш результат 17 из 20!
+            p.popup__save Укажите ваше имя и фамилию, чтобы сохранить результат
+         form.form(action="#")
+            .form__inputs
+               label.form__label
+                  span.form__label-title Введите имя
+                  input(type="text" placeholder="Александр")
+               label.form__label
+                  span.form__label-title Введите фамилию
+                  input(type="text" placeholder="Петров")
+            button.btn Сохранить результат
+               span.btn__arrow
+                  img.btn__arrow-svg(src="images/icons/arrow.svg" alt="стрелка" width="91" height="46")
+
+

@@ -14,6 +14,8 @@
          display: none
    &__title
       margin-bottom: 24px
+   &__item
+      position: relative
    &__info
       margin-bottom: 40px
       font-weight: 600
@@ -52,6 +54,9 @@
       text-transform: uppercase
       color: var(--titleColor)
    &__score
+      position: absolute
+      top: 0
+      right: 0
       &-num
          color: var(--accent)
    &__text
@@ -84,6 +89,9 @@
       color: var(--accent)
    &__control
       display: none
+   &__item
+      &--last
+         display: none
 
 @media all and (min-width: 768px)
    .wish
@@ -152,21 +160,24 @@
             top: 0
             bottom: 0
             background: linear-gradient(270deg, #CBCBC9 35%, rgba(202, 202, 202, 0) 100%)
-            width: 440px
+            width: 294px
          &-inner
             margin-bottom: 50px
+            padding-right: 100px
          .swiper
             &-scrollbar
                left: calc((100% - 1216px)/2)
                right: 20px
                width: auto
                max-width: 1256px
+      &__item
+         width: 490px
+         &--last
+            display: block
 
 @media all and (min-width: 1366px)
    .wish
       padding: 70px 0
-      &__item
-         padding-right: 10px
       &__text
          margin-bottom: 36px
       &__info
@@ -179,6 +190,10 @@
       &__slider
          &-inner
             margin-bottom: 67px
+      &__score
+         right: 10px
+      &__item
+         padding-right: 10px
 
 @media all and (min-width: 1440px)
    .wish
@@ -198,4 +213,7 @@
    .wish
       &__star
          width: 545px
-
+      &__item
+         width: 490px
+         &--last
+            width: calc((100% - 1286px))

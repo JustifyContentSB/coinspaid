@@ -1,6 +1,8 @@
 .popup
    width: calc(100% - 40px)
    max-width: 555px
+   max-height: 100vh
+   overflow-y: auto
    position: fixed
    z-index: 100
    left: 50%
@@ -14,6 +16,7 @@
       position: absolute
       right: 34px
       top: 34px
+      z-index: 5
    .form
       &__label
          width: 100%
@@ -22,11 +25,80 @@
             margin-bottom: 0
       &__inputs
          margin-bottom: 32px
+   &-result
+      max-width: 1010px
+      background: #E6E6E6
+      .popup
+         &__inner
+            padding: 40px 50px 50px
+            padding-right: 390px
+      .form
+         max-width: 284px
+         &__inputs
+            margin-bottom: 10px
+   &__title
+      margin-bottom: 24px
+      font-weight: bold
+      font-size: 60px
+      line-height: 120%
+   &__num
+      margin-bottom: 30px
+      font-weight: bold
+      font-size: 30px
+      line-height: 120%
+   &__save
+      font-weight: 600
+      margin-bottom: 40px
+      font-size: 17px
+      line-height: 140%
+   &__light
+      position: absolute
+      right: 0
+      top: 0
+      max-height: 100%
+   &__santa
+      position: absolute
+      right: 0
+      bottom: 0
+   &__content
+      position: relative
+      z-index: 10
 
 @media all and (max-width: 1000px)
    .popup
       &__inner
          padding: 50px
+      &-result
+         .popup
+            &__inner
+               padding-right: 200px
+      &__santa
+         width: 400px
+      &__title
+         margin-bottom: 20px
+         font-size: 50px
+      &__num
+         margin-bottom: 20px
+         font-size: 26px
+      &__save
+         margin-bottom: 30px
+
+@media all and (max-width: 800px)
+   .popup
+      &-result
+         .popup
+            &__inner
+               padding: 60px 50px
+         .form
+            max-width: 100%
+      &__santa, &__light
+         display: none
+      &__title
+         font-size: 32px
+      &__num
+         font-size: 18px
+      &__save
+         font-size: 15px
 
 @media all and (max-width: 460px)
    .popup
@@ -39,4 +111,11 @@
       &__close
          top: 20px
          right: 30px
-      
+      &-result
+         .popup
+            &__inner
+               padding: 60px 30px
+      &__title
+         font-size: 24px
+      &__num
+         font-size: 16px

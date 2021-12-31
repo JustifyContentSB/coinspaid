@@ -747,7 +747,8 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden
+  overflow-x: hidden;
+  font-feature-settings: "lnum"
 }
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
@@ -1201,7 +1202,7 @@ picture {
     padding-bottom: 126px
   }
   .header__info-inner {
-    max-width: 560px
+    max-width: 570px
   }
   .header__design {
     width: 50%;
@@ -1219,7 +1220,8 @@ picture {
     width: 605px
   }
   .header__design {
-    height: 911px
+    height: auto;
+    max-width: 860px
   }
 }
 @media all and (min-width:1921px) {
@@ -1231,6 +1233,119 @@ picture {
   }
   .header__light {
     left: -300px
+  }
+}
+.header__circle-one {
+  position: absolute;
+  left: 0;
+  top: -20px
+}
+.header__circle-two {
+  position: absolute;
+  left: -90px;
+  bottom: 0
+}
+.header__slider {
+  background: var(--formColor);
+  overflow: hidden
+}
+.header__slider-inner {
+  padding-left: 50px;
+  min-height: 70px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.header__slider-person {
+  margin-right: 70px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap
+}
+.header__slider-score {
+  color: var(--accent)
+}
+.header--survey {
+  position: relative
+}
+.header--survey .header__title {
+  font-weight: 700
+}
+.header--survey .header__text {
+  margin-bottom: 48px
+}
+.header--survey .header__img {
+  width: auto;
+  max-width: 1175px;
+  height: auto
+}
+.header--survey .header__img img {
+  max-width: none
+}
+@media all and (max-width:1700px) {
+  .header__circle-one {
+    left: 300px
+  }
+  .header__circle-two {
+    display: none
+  }
+}
+@media all and (max-width:1365px) {
+  .header__circle-one {
+    width: 300px
+  }
+  .header__slider-inner {
+    font-size: 20px
+  }
+}
+@media all and (max-width:1279px) {
+  .header__circle-one {
+    left: auto;
+    right: 0
+  }
+  .header--survey {
+    padding-bottom: 0
+  }
+  .header--survey .header__bottom {
+    display: none
+  }
+  .header--survey .header__design {
+    height: auto;
+    margin-bottom: 0
+  }
+  .header--survey .header__img {
+    position: static
+  }
+  .header--survey .header__img picture {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+  .header--survey .header__img img {
+    width: 50%;
+    max-width: 100%
+  }
+}
+@media all and (max-width:767px) {
+  .header__circle-one {
+    width: 240px
+  }
+  .header--survey .header__img img {
+    width: 80%
+  }
+}
+@media all and (max-width:460px) {
+  .header__circle-one {
+    width: 180px
+  }
+  .header__slider-inner {
+    font-size: 16px
   }
 }
 .main {
@@ -1649,6 +1764,9 @@ picture {
 .wish__title {
   margin-bottom: 24px
 }
+.wish__item {
+  position: relative
+}
 .wish__info {
   margin-bottom: 40px;
   font-weight: 600;
@@ -1697,6 +1815,11 @@ picture {
   line-height: 140%;
   text-transform: uppercase;
   color: var(--titleColor)
+}
+.wish__score {
+  position: absolute;
+  top: 0;
+  right: 0
 }
 .wish__score-num {
   color: var(--accent)
@@ -1748,6 +1871,9 @@ picture {
   color: var(--accent)
 }
 .wish__control {
+  display: none
+}
+.wish__item--last {
   display: none
 }
 @media all and (min-width:768px) {
@@ -1842,10 +1968,11 @@ picture {
     top: 0;
     bottom: 0;
     background: linear-gradient(270deg,#cbcbc9 35%,rgba(202,202,202,0) 100%);
-    width: 440px
+    width: 294px
   }
   .wish__slider-inner {
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    padding-right: 100px
   }
   .wish__slider .swiper-scrollbar {
     left: calc((100% - 1216px)/ 2);
@@ -1853,13 +1980,16 @@ picture {
     width: auto;
     max-width: 1256px
   }
+  .wish__item {
+    width: 490px
+  }
+  .wish__item--last {
+    display: block
+  }
 }
 @media all and (min-width:1366px) {
   .wish {
     padding: 70px 0
-  }
-  .wish__item {
-    padding-right: 10px
   }
   .wish__text {
     margin-bottom: 36px
@@ -1876,6 +2006,12 @@ picture {
   }
   .wish__slider-inner {
     margin-bottom: 67px
+  }
+  .wish__score {
+    right: 10px
+  }
+  .wish__item {
+    padding-right: 10px
   }
 }
 @media all and (min-width:1440px) {
@@ -1901,6 +2037,12 @@ picture {
 @media all and (min-width:1800px) {
   .wish__star {
     width: 545px
+  }
+  .wish__item {
+    width: 490px
+  }
+  .wish__item--last {
+    width: calc((100% - 1286px))
   }
 }
 .quiz {
@@ -2170,6 +2312,8 @@ picture {
 .popup {
   width: calc(100% - 40px);
   max-width: 555px;
+  max-height: 100vh;
+  overflow-y: auto;
   position: fixed;
   z-index: 100;
   left: 50%;
@@ -2185,7 +2329,8 @@ picture {
 .popup__close {
   position: absolute;
   right: 34px;
-  top: 34px
+  top: 34px;
+  z-index: 5
 }
 .popup .form__label {
   width: 100%;
@@ -2197,9 +2342,94 @@ picture {
 .popup .form__inputs {
   margin-bottom: 32px
 }
+.popup-result {
+  max-width: 1010px;
+  background: #e6e6e6
+}
+.popup-result .popup__inner {
+  padding: 40px 50px 50px;
+  padding-right: 390px
+}
+.popup-result .form {
+  max-width: 284px
+}
+.popup-result .form__inputs {
+  margin-bottom: 10px
+}
+.popup__title {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%
+}
+.popup__num {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%
+}
+.popup__save {
+  font-weight: 600;
+  margin-bottom: 40px;
+  font-size: 17px;
+  line-height: 140%
+}
+.popup__light {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-height: 100%
+}
+.popup__santa {
+  position: absolute;
+  right: 0;
+  bottom: 0
+}
+.popup__content {
+  position: relative;
+  z-index: 10
+}
 @media all and (max-width:1000px) {
   .popup__inner {
     padding: 50px
+  }
+  .popup-result .popup__inner {
+    padding-right: 200px
+  }
+  .popup__santa {
+    width: 400px
+  }
+  .popup__title {
+    margin-bottom: 20px;
+    font-size: 50px
+  }
+  .popup__num {
+    margin-bottom: 20px;
+    font-size: 26px
+  }
+  .popup__save {
+    margin-bottom: 30px
+  }
+}
+@media all and (max-width:800px) {
+  .popup-result .popup__inner {
+    padding: 60px 50px
+  }
+  .popup-result .form {
+    max-width: 100%
+  }
+  .popup__light,
+  .popup__santa {
+    display: none
+  }
+  .popup__title {
+    font-size: 32px
+  }
+  .popup__num {
+    font-size: 18px
+  }
+  .popup__save {
+    font-size: 15px
   }
 }
 @media all and (max-width:460px) {
@@ -2213,6 +2443,191 @@ picture {
   .popup__close {
     top: 20px;
     right: 30px
+  }
+  .popup-result .popup__inner {
+    padding: 60px 30px
+  }
+  .popup__title {
+    font-size: 24px
+  }
+  .popup__num {
+    font-size: 16px
+  }
+}
+.survey {
+  padding-top: 150px;
+  padding-bottom: 50px
+}
+.survey__slider {
+  width: 100%;
+  height: 6px;
+  margin-bottom: 14px;
+  background: #b6b6b9;
+  position: relative
+}
+.survey__slider-way {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 103px;
+  height: 4px;
+  background: var(--accent)
+}
+.survey__desc {
+  width: 100%;
+  max-width: 700px
+}
+.survey__item {
+  margin-bottom: 150px;
+  position: relative
+}
+.survey__item-inner {
+  position: relative;
+  z-index: 5
+}
+.survey__sun {
+  position: absolute;
+  left: 0
+}
+.survey__num {
+  margin-bottom: 40px;
+  text-align: center
+}
+.survey__num-count {
+  font-weight: 600
+}
+.survey__title {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%
+}
+.survey__img {
+  margin-bottom: 50px
+}
+.survey__img img {
+  width: 100%
+}
+.survey__choose {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
+}
+.survey__choose-item {
+  width: calc(50% - 15px);
+  margin-bottom: 30px
+}
+.survey__choose-btn {
+  width: 100%;
+  min-height: 90px;
+  height: 100%;
+  padding: 26px 40px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 3px solid #8a8a8a;
+  font-weight: 400;
+  color: var(--titleColor);
+  transition: background .2s ease;
+  text-align: left
+}
+.survey__choose-btn--yes {
+  background: #cae6af
+}
+.survey__choose-btn--no {
+  background: #e6afaf
+}
+.survey__choose-btn:focus,
+.survey__choose-btn:hover {
+  background: #e6e3e6
+}
+.survey__bottom {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex
+}
+.survey__send {
+  margin-left: auto
+}
+.survey__about {
+  width: 100%;
+  max-width: 696px;
+  margin-bottom: 50px
+}
+@media all and (max-width:1365px) {
+  .survey {
+    padding-top: 100px
+  }
+  .survey__title {
+    margin-bottom: 26px;
+    font-size: 26px
+  }
+  .survey__about,
+  .survey__img {
+    margin-bottom: 34px
+  }
+  .survey__choose-item {
+    width: calc(50% - 10px);
+    margin-bottom: 20px
+  }
+  .survey__choose-btn {
+    min-height: 76px;
+    padding: 20px 30px
+  }
+  .survey__sun {
+    display: none
+  }
+}
+@media all and (max-width:800px) {
+  .survey__item {
+    margin-bottom: 80px
+  }
+  .survey__title {
+    font-size: 23px
+  }
+  .survey__choose {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .survey__choose-item {
+    width: 100%
+  }
+  .survey__choose-btn {
+    padding: 20px 25px
+  }
+}
+@media all and (max-width:460px) {
+  .survey__title {
+    margin-bottom: 16px;
+    font-size: 20px
+  }
+  .survey__about,
+  .survey__img {
+    margin-bottom: 26px
+  }
+  .survey__choose-item {
+    margin-bottom: 15px
+  }
+  .survey__choose-btn {
+    min-height: 60px;
+    padding: 15px;
+    font-size: 14px
+  }
+  .survey__bottom {
+    margin-top: 16px
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

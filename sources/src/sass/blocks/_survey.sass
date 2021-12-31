@@ -1,0 +1,125 @@
+.survey
+   padding-top: 150px
+   padding-bottom: 50px
+   &__slider
+      width: 100%
+      height: 6px
+      margin-bottom: 14px
+      background: #B6B6B9
+      position: relative
+      &-way
+         position: absolute
+         left: 1px
+         top: 1px
+         width: 103px
+         height: 4px
+         background: var(--accent)
+   &__desc
+      width: 100%
+      max-width: 700px
+   &__item
+      margin-bottom: 150px
+      position: relative
+      &-inner
+         position: relative
+         z-index: 5
+   &__sun
+      position: absolute
+      left: 0
+   &__num
+      margin-bottom: 40px
+      text-align: center
+      &-count
+         font-weight: 600
+   &__title
+      margin-bottom: 40px
+      font-weight: bold
+      font-size: 30px
+      line-height: 120%
+   &__img
+      margin-bottom: 50px
+      img
+         width: 100%
+   &__choose
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      &-item
+         width: calc(50% - 15px)
+         margin-bottom: 30px
+      &-btn
+         width: 100%
+         min-height: 90px
+         height: 100%
+         padding: 26px 40px
+         display: flex
+         justify-content: flex-start
+         align-items: center
+         border: 3px solid #8A8A8A
+         font-weight: 400
+         color: var(--titleColor)
+         transition: background .2s ease
+         text-align: left
+         &--yes
+            background: #CAE6AF
+         &--no
+            background: #E6AFAF
+         &:hover,
+         &:focus
+            background: #E6E3E6
+   &__bottom
+      display: flex
+   &__send
+      margin-left: auto
+   &__about
+      width: 100%
+      max-width: 696px
+      margin-bottom: 50px
+
+@media all and (max-width: 1365px)
+   .survey
+      padding-top: 100px
+      &__title
+         margin-bottom: 26px
+         font-size: 26px
+      &__about, &__img
+         margin-bottom: 34px
+      &__choose
+         &-item
+            width: calc(50% - 10px)
+            margin-bottom: 20px
+         &-btn
+            min-height: 76px
+            padding: 20px 30px
+      &__sun
+         display: none
+
+@media all and (max-width: 800px)
+   .survey
+      &__item
+         margin-bottom: 80px
+      &__title
+         font-size: 23px
+      &__choose
+         flex-direction: column
+         &-item
+            width: 100%
+         &-btn
+            padding: 20px 25px
+
+@media all and (max-width: 460px)
+   .survey
+      &__title
+         margin-bottom: 16px
+         font-size: 20px
+      &__about, &__img
+         margin-bottom: 26px
+      &__choose
+         &-item
+            margin-bottom: 15px
+         &-btn
+            min-height: 60px
+            padding: 15px
+            font-size: 14px
+      &__bottom
+         margin-top: 16px
